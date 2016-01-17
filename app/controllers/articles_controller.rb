@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    @results = Article.search(params[:search])
   end
 
   # GET /articles/1
